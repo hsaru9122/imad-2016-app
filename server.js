@@ -10,6 +10,10 @@ app.get('/', function (req, res) {
 });
 
 app.get('/ui/style.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
+
+app.get('/ui/style2.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style2.css'));
 });
 
@@ -89,6 +93,14 @@ app.get('/ui/title_join_my_club.gif', function (req, res) {
 
 app.get('/ui/title_welcome.gif', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'title_welcome.gif'));
+});
+
+
+app.get('/ui/logo.gif', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'logo.gif'));
+});
+app.get('/ui/title_enter.gif', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'title_enter.gif'));
 });
 
 
